@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Controle de Notas</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <main>
+        <div class="container">
+            <header class="cabecalho">
+                <h1>Sistema de Controle de Notas</h1>
+                <p id="bem-vindo"></p>
+            </header>
+
+            <section class="card cadastro-card" aria-labelledby="titulo-cadastro">
+                <h2 id="titulo-cadastro">Cadastrar aluno</h2>
+                <div class="campos-cadastro">
+                    <div class="campo-cadastro">
+                        <label for="nome">Nome do aluno</label>
+                        <input type="text" id="nome" placeholder="Digite o nome">
+                    </div>
+
+                    <div class="campo-cadastro">
+                        <label for="turma">Turma</label>
+                        <select id="turma">
+                            <option value="">Selecione a turma</option>
+                            <option value="Turma 1">Turma 1</option>
+                            <option value="Turma 2">Turma 2</option>
+                            <option value="Turma 3">Turma 3</option>
+                        </select>
+                    </div>
+
+                    <button id="adicionar-aluno" type="button">Adicionar aluno</button>
+                </div>
+                <button id="mostrar-alunos" type="button" aria-expanded="false" aria-controls="card-alunos-curso">
+                    Mostrar alunos
+                </button>
+            </section>
+
+            <section id="card-alunos-curso" class="card" aria-labelledby="titulo-alunos-curso" hidden>
+                <h2 id="titulo-alunos-curso">Alunos em Curso</h2>
+                <p>Selecione uma turma e depois um aluno para abrir a ficha.</p>
+                <div id="lista-alunos" class="lista-turmas"></div>
+            </section>
+
+            <section id="ficha-aluno" class="card" aria-labelledby="nome-selecionado" hidden>
+                <h2 id="nome-selecionado"></h2>
+                <p id="turma-selecionada" class="turma-selecionada"></p>
+
+                <div class="campos-notas">
+                    <label for="nota1">Nota 1</label>
+                    <input type="number" id="nota1" min="0" max="10" step="0.1">
+
+                    <label for="nota2">Nota 2</label>
+                    <input type="number" id="nota2" min="0" max="10" step="0.1">
+
+                    <label for="nota3">Nota 3</label>
+                    <input type="number" id="nota3" min="0" max="10" step="0.1">
+
+                    <label for="nota4">Nota 4</label>
+                    <input type="number" id="nota4" min="0" max="10" step="0.1">
+                </div>
+
+                <div class="acoes-ficha">
+                    <button id="salvar-notas" type="button">Salvar notas</button>
+                    <button id="calcular-media" type="button">Calcular média</button>
+                </div>
+            </section>
+
+            <section class="resultados" aria-label="Resultados finais">
+                <article class="card resultado-card">
+                    <h2>Aprovados</h2>
+                    <ul id="lista-aprovados"></ul>
+                </article>
+
+                <article class="card resultado-card">
+                    <h2>Recuperação</h2>
+                    <ul id="lista-recuperacao"></ul>
+                </article>
+
+                <article class="card resultado-card">
+                    <h2>Reprovados</h2>
+                    <ul id="lista-reprovados"></ul>
+                </article>
+            </section>
+        </div>
+        <button id="logout" type="button">Sair</button>
+
+    </main>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

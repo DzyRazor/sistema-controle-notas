@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login do Professor</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="login.js" defer></script>
+</head>
+<body class="login-page">
+    <main class="login-layout">
+        <section class="login-card" aria-labelledby="titulo-login">
+            <p class="login-eyebrow">SISTEMA ACADÊMICO</p>
+            <h1 id="titulo-login">Acesso do Professor</h1>
+            <p class="login-description">Entre com suas credenciais para continuar.</p>
+
+            <form id="formulario-login">
+                <label for="id-professor">ID do professor</label>
+                <input id="id-professor" type="text" autocomplete="username" required>
+
+                <label for="senha-professor">Senha</label>
+                <input id="senha-professor" type="password" autocomplete="current-password" required>
+
+                <button type="submit">Entrar</button>
+
+                <p id="mensagem-login" role="status" aria-live="polite"></p>
+            </form>
+        </section>
+    </main>
+
+</body>
+</html>
