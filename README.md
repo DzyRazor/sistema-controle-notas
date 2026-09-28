@@ -28,3 +28,5 @@ HTML, CSS e JavaScript puro.
 ## Observação
 
 Este é um projeto educacional. A autenticação é feita no JavaScript do navegador e não deve ser usada para proteger dados reais. Os dados cadastrados ficam armazenados localmente no navegador.
+
+## Att; Leonardo.S - Obrigado!
